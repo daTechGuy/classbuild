@@ -247,8 +247,9 @@ export function ApiKeyPanel() {
 
       {provider === 'ollama' && ollamaApiKey.trim() && (
         <div className="rounded-lg border border-violet-500/15 bg-bg-card px-3.5 py-3 space-y-1.5">
-          <label className="block text-xs font-medium text-text-secondary">Ollama model</label>
+          <label htmlFor="ollama-model-input" className="block text-xs font-medium text-text-secondary">Ollama model</label>
           <input
+            id="ollama-model-input"
             type="text"
             value={ollamaModel}
             onChange={(e) => setOllamaModel(e.target.value)}
