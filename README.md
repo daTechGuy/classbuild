@@ -197,6 +197,10 @@ src/
 
 React 19 · Vite 7 · TypeScript 5.9 · Tailwind CSS 4 · Zustand · JSZip · mammoth.js · Claude (Sonnet 4.6 / Opus 4.6 / Haiku 4.5) · Ollama Cloud · Tavily · Gemini
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for dev setup, commit conventions, and what every PR needs. CI runs `tsc -b`, `npm run lint`, `npm test`, and `npm run build` on every push and PR.
+
 ## Credit
 
 Built on [ClassBuild](https://github.com/jtangen/classbuild) by Jason Tangen — the foundation of this fork. The IMSCC export, Canvas template handling, course-outline DOCX parsing, multi-provider LLM/research routing, and the rebrand are added on top, but the original learning-science engine, prompt library, and content generators are all from upstream.
