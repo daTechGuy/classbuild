@@ -36,7 +36,7 @@ async function reparseStaleTemplates(initialTemplates: Template[]): Promise<void
         templates: s.templates.map((x) => (x.id === t.id ? updated : x)),
       }));
     } catch (err) {
-      // eslint-disable-next-line no-console
+       
       console.warn(`Failed to re-parse stale template ${t.id}:`, err);
     }
   }

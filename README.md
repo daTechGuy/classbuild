@@ -6,6 +6,8 @@
 
 # CanvasClassBuild
 
+[![CI](https://github.com/daTechGuy/CanvasClassBuild/actions/workflows/ci.yml/badge.svg)](https://github.com/daTechGuy/CanvasClassBuild/actions/workflows/ci.yml)
+
 **An AI-assisted Canvas course builder.** Upload a Canvas course template, describe your course, get an `.imscc` ready to import.
 
 A fork of [ClassBuild](https://github.com/jtangen/classbuild) by Jason Tangen, retargeted at instructors who need to ship Canvas-shaped courses fast: takes a Canvas course export (`.imscc`) as a structural template, generates AI content for each module that matches the template's pattern, and produces a fresh `.imscc` for re-import.
