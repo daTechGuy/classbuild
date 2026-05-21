@@ -85,8 +85,15 @@ runs in <1s.
 ```bash
 npm test               # run once
 npm run test:watch     # re-run on file change
-npm run test:coverage  # generate coverage report
+npm run test:coverage  # generate coverage report (HTML at coverage/index.html)
 ```
+
+CI runs `test:coverage` on every push and PR; the resulting `coverage/`
+directory uploads as a workflow artifact (`coverage-report`, retained 14 days).
+Baseline at the time of the test scaffold lands: ~22% lines / ~15% branches
+across the instrumented modules (parser, exporters, research backends,
+services, setup components). Pages — `BuildPage`, `SyllabusPage`,
+`ExportPage`, `ResearchPage` — are not yet instrumented for unit tests.
 
 Current coverage:
 - `tests/template-parser.test.ts` — module classification (verbatim / pattern / example-pattern), prefix detection (`Module N:`, `MN Instructor Notes:`, fully-locked `Module N Overview`), `(Example to Edit)` placeholder marker, `**EDIT**` markers, example-pattern content extraction.
