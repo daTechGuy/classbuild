@@ -1,0 +1,9 @@
+# https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Single-maintainer fork — daTechGuy is the default reviewer for everything.
+# GitHub auto-requests their review on every PR opened against main, and (if
+# branch protection requires CODEOWNERS approval) blocks merge until they
+# approve. The fallback ownership saves us from having to maintain per-path
+# rules until the team actually grows.
+
+* @daTechGuy
