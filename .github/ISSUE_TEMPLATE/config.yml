@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Question about the upstream ClassBuild project
+    url: https://github.com/jtangen/classbuild/issues
+    about: This fork carries the Canvas-specific feature surface. Questions about the original multimedia course generator (slides, audio, infographics, learning-science engine) belong upstream.
+  - name: 📖 Contributing guide
+    url: https://github.com/daTechGuy/CanvasClassBuild/blob/main/CONTRIBUTING.md
+    about: Setup, conventions, and what every PR needs.

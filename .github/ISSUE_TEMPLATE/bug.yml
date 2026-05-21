@@ -1,0 +1,108 @@
+name: 🐛 Bug report
+description: Something is broken or behaving wrong.
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. The more specific you can be, the faster we can fix it.
+        For security issues, please email instead of filing publicly.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you observe? Include exact error messages if any.
+      placeholder: 'When I click Export, the .imscc downloads but Canvas refuses to import it with error X…'
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps so we can hit the same path.
+      value: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      placeholder: 'The .imscc should import without errors.'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did this happen
+      multiple: true
+      options:
+        - Setup page
+        - Syllabus page
+        - Research page
+        - Build page
+        - Export page
+        - Templates page (/templates)
+        - canvas-course.ts CLI
+        - generate-course.ts CLI
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: provider
+    attributes:
+      label: LLM provider
+      options:
+        - Anthropic (Claude)
+        - Ollama Cloud
+        - Both / not provider-specific
+        - N/A
+    validations:
+      required: true
+
+  - type: dropdown
+    id: research
+    attributes:
+      label: Research backend (if relevant)
+      options:
+        - N/A
+        - Claude web search
+        - Tavily
+        - Wikipedia
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser + version (if a UI bug)
+      placeholder: 'Chrome 130, Firefox 132, Safari 18, etc.'
+
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: 'macOS 15, Windows 11, Ubuntu 24.04…'
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output / network errors / screenshots
+      description: Anything you saw in the browser devtools or CLI output. Attach screenshots by dragging.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for this bug.
+          required: true
+        - label: I checked CONTRIBUTING.md.
+          required: false

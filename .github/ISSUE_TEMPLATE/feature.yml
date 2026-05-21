@@ -1,0 +1,72 @@
+name: ✨ Feature request
+description: Suggest a new capability or improvement.
+title: '[Feature]: '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Lead with the problem; the proposal is just one possible answer.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What's missing, broken, or painful right now? A user story works well here.
+      placeholder: |
+        "As an instructor with a multi-section course, I want to generate course variants from one syllabus, because I currently have to re-run everything per section."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would the feature look like? UI, CLI flag, config option, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What else did you think about, and why is the proposal better?
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Which area
+      multiple: true
+      options:
+        - Template parser
+        - IMSCC export
+        - Course-outline (DOCX) parsing
+        - LLM provider (Anthropic / Ollama)
+        - Research backend (Anthropic / Tavily / Wikipedia)
+        - Setup / Syllabus / Build / Export UI
+        - canvas-course.ts CLI
+        - generate-course.ts CLI
+        - Testing / CI
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: upstream
+    attributes:
+      label: Would upstream want this too?
+      description: |
+        If the feature is general (better prompt, accessibility fix, shared service improvement),
+        consider opening it against [jtangen/classbuild](https://github.com/jtangen/classbuild) instead — they cover
+        the multimedia course generator that's not Canvas-specific.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for this request.
+          required: true
+        - label: I'm willing to discuss trade-offs before implementation.
+          required: false
