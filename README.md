@@ -7,6 +7,7 @@
 # CanvasClassBuild
 
 [![CI](https://github.com/daTechGuy/CanvasClassBuild/actions/workflows/ci.yml/badge.svg)](https://github.com/daTechGuy/CanvasClassBuild/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/daTechGuy/CanvasClassBuild/branch/main/graph/badge.svg)](https://codecov.io/gh/daTechGuy/CanvasClassBuild)
 
 **An AI-assisted Canvas course builder.** Upload a Canvas course template, describe your course, get an `.imscc` ready to import.
 

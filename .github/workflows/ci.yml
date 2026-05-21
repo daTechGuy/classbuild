@@ -49,5 +49,17 @@ jobs:
           path: coverage/
           retention-days: 14
 
+      - name: Upload coverage to Codecov
+        # Send lcov to Codecov even on test failure so trend data captures
+        # partial coverage; tokenless would also work for public repos but
+        # the explicit token avoids the "no token" rate limits.
+        if: ${{ always() }}
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/lcov.info
+          flags: unittests
+          fail_ci_if_error: false
+
       - name: Build
         run: npm run build
