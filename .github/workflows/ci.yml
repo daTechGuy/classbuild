@@ -43,7 +43,7 @@ jobs:
         # Always upload — even on test failure — so the report is available
         # to dig through when the run goes red.
         if: ${{ always() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: coverage-report
           path: coverage/
