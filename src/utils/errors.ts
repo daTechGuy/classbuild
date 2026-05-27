@@ -55,7 +55,7 @@ export function friendlyError(err: unknown, fallback = 'Something went wrong. Tr
   }
 
   // Network
-  if (/failed to fetch|network|ecconnreset|timeout|timed out|econnref/i.test(message)) {
+  if (/failed to fetch|network|econnreset|timeout|timed out|econnref/i.test(message)) {
     return 'Network error. Check your connection and retry.';
   }
 
